@@ -1,9 +1,7 @@
-## C33 Pitch Day Projects
+## C33 MTB Weather
 
-Begin by issuing pull requests for the first two issues in this repository.
+![](readme_assets/images/home.png)
 
-After the instructor advisor for the project merges the pull requests, coding may begin on the project.
+![](readme_assets/images/main.png)
 
-Example of embedded image in Markdown in README.md:
-
-![](readme_assets/images/wireframe_example.jpg)
+![](readme_assets/images/new_trail.png)

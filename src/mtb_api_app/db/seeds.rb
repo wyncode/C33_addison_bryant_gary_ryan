@@ -63,3 +63,15 @@ markham.save!
   amelia.save!
   
   puts "#{Trail.count} trails in the system..."
+
+  route66 = Section.new(
+      name: "Route 66",
+      trail: markham
+  )
+  route66.save!
+
+  strangler = Section.new(
+      name: "Strangler Fig",
+      trail: oleta
+  )
+  strangler.save!

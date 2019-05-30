@@ -12,13 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_05_25_190128) do
 
-  create_table "items", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "sections", force: :cascade do |t|
     t.string "name"
     t.integer "trail_id"
@@ -33,8 +26,10 @@ ActiveRecord::Schema.define(version: 2019_05_25_190128) do
     t.float "lon"
     t.integer "light_rain_wait"
     t.integer "heavy_rain_wait"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_trails_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -23,7 +23,8 @@
       lat: 26.134322,
       lon: -80.349492,
       light_rain_wait: 1,
-      heavy_rain_wait: 4
+      heavy_rain_wait: 4,
+      user: User.find(User.pluck(:id).sample)
   )
 markham.save!
   quiet_waters = Trail.new(
@@ -31,7 +32,8 @@ markham.save!
       lat: 26.309262,
       lon: -80.164765,
       light_rain_wait: 0,
-      heavy_rain_wait: 2
+      heavy_rain_wait: 2,
+      user: User.find(User.pluck(:id).sample)
   )
   quiet_waters.save!
 
@@ -40,7 +42,8 @@ markham.save!
       lat: 25.754014,
       lon: -80.150108,
       light_rain_wait: 0,
-      heavy_rain_wait: 2
+      heavy_rain_wait: 2,
+      user: User.find(User.pluck(:id).sample)
   )
   virginia_key.save!
 
@@ -49,7 +52,8 @@ markham.save!
       lat: 25.915719,
       lon: -80.135142,
       light_rain_wait: 0,
-      heavy_rain_wait: 2
+      heavy_rain_wait: 2,
+      user: User.find(User.pluck(:id).sample)
   )
   oleta.save!
 
@@ -58,7 +62,8 @@ markham.save!
       lat: 25.893048,
       lon: -80.280501,
       light_rain_wait: 2,
-      heavy_rain_wait: 6
+      heavy_rain_wait: 6,
+      user: User.find(User.pluck(:id).sample)
   )
   amelia.save!
   

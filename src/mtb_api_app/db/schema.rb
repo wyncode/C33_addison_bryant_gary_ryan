@@ -15,16 +15,9 @@ ActiveRecord::Schema.define(version: 2019_05_25_190128) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "items", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "sections", force: :cascade do |t|
     t.string "name"
-    t.integer "trail_id"
+    t.bigint "trail_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["trail_id"], name: "index_sections_on_trail_id"
@@ -36,7 +29,7 @@ ActiveRecord::Schema.define(version: 2019_05_25_190128) do
     t.float "lon"
     t.integer "light_rain_wait"
     t.integer "heavy_rain_wait"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_trails_on_user_id"
@@ -50,4 +43,6 @@ ActiveRecord::Schema.define(version: 2019_05_25_190128) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "sections", "trails"
+  add_foreign_key "trails", "users"
 end

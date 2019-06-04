@@ -1,0 +1,7 @@
+token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMCwiZXhwIjoxNTU5NDE3MzkzfQ.LRwlR4_-3d4kExxiIpdAoafHc2P8CNpH-dK1VvdM36s
+
+curl -i -H "Authorization:$token" \
+     -H "Content-Type: application/json" \
+     -d '{"trail":{"name": "foo trail", "lat": "25.89", "lon": "-80.45", "light_rain_wait": "1", "heavy_rain_wait": "5", "user_id": "1"}}' \
+	http://localhost:3000/trails \
+	| python -m json.tool | tee result.json

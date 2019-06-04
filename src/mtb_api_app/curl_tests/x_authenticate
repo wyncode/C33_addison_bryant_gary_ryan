@@ -1,0 +1,2 @@
+curl -i -H 'Content-Type: application/json' -X POST -d '{"email":"edison@gerlachkunde.com","password":"password"}' https://mtb-weather.herokuapp.com/authenticate > token.json
+

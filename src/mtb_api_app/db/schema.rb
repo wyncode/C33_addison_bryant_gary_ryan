@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_05_25_190128) do
 
   create_table "trails", force: :cascade do |t|
     t.string "name"
+    t.string "pic_url"
     t.float "lat"
     t.float "lon"
     t.integer "light_rain_wait"

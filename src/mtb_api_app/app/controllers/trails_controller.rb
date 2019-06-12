@@ -8,7 +8,16 @@ class TrailsController < ApplicationController
 
   # GET /trails/1
   def show
-    render json: { data: @trail }, status: 200
+    weather = @trail.weather
+    trail = @trail
+    render json:  { 
+                    data: @trail,
+                    weather: weather, 
+                    hours_of_rain_since_midnight: @trail.hours_of_rain_since_midnight(weather),
+                    rain_probabilities_since_midnight: @trail.rain_probabilities_since_midnight(weather),
+                    sections: Section.where(trail_id:@trail).pluck(:name)
+                    
+                  }, status: 200
   end
 
   # GET /trails/new

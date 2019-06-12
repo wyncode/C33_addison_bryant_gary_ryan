@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
-    before_action :authenticate_request, :cors_preflight_check
+    before_action :cors_preflight_check
+    #before_action :authenticate_request, :cors_preflight_check
 
      attr_reader :current_user
 

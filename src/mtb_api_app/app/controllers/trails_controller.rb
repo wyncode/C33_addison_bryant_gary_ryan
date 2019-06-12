@@ -8,6 +8,7 @@ class TrailsController < ApplicationController
 
   # GET /trails/1
   def show
+    @trail = Trail.find(params[:id]) || Trail.first
     weather = @trail.weather
     trail = @trail
     render json:  { 
